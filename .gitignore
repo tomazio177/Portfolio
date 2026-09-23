@@ -1,0 +1,6 @@
+# bundle original do design: tem a fonte paga (PP Neue Montreal)
+# e capturas de ecrã do processo, que não devem ir para um repositório público
+handoff/
+
+# imagens tal como vieram (as versões usadas no site estão em assets/)
+assets/originais/
