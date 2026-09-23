@@ -1,7 +1,7 @@
 # Portfólio
 
 Site estático (HTML + CSS + JS, sem build) construído a partir do design
-original em `handoff/site-de-portf-lio-interativo/project/Portfolio.dc.html`.
+original (`Portfolio.dc.html`). Publicado em **https://tomazio177.github.io/**.
 
 ## Correr localmente
 
@@ -11,8 +11,7 @@ Qualquer servidor estático serve. Com Python:
 python -m http.server 5173
 ```
 
-Depois abre <http://localhost:5173>. (Abrir o `index.html` diretamente por
-`file://` também funciona, mas as fontes locais podem não carregar.)
+Depois abre <http://localhost:5173>.
 
 ## Estrutura
 
@@ -50,17 +49,16 @@ Os cards da secção **Projetos** não estão no HTML — são construídos em r
 `js/github-projects.js` a partir da API pública do GitHub. Não há backend, não
 há token, não há dependências.
 
-### 1. Põe aqui o teu username
+### 1. Username
 
-Abre `js/github-projects.js` e edita **a linha 17**:
+Está em `js/github-projects.js`, **linha 17**:
 
 ```js
-var GITHUB_USERNAME = 'USERNAME';   // <<<<< o teu username
+var GITHUB_USERNAME = 'tomazio177';
 var TOPIC           = 'portfolio';  // o tópico que filtra os repos
 ```
 
-É o único sítio onde o username aparece. Enquanto estiver a `'USERNAME'`, o
-site mostra um aviso e nem chega a chamar a API.
+É o único sítio onde o username aparece.
 
 ### 2. Marca os repos que queres mostrar
 
@@ -114,6 +112,16 @@ publica sozinho ao fim de um minuto ou dois.
 - O endereço aparece em `index.html` (canonical, og:url, og:image, JSON-LD),
   `robots.txt` e `sitemap.xml`. Se um dia mudar (ex.: domínio próprio),
   troca-se nesses sítios.
+
+Primeira publicação (só uma vez):
+
+1. Em <https://github.com/new> criar o repositório `tomazio177.github.io`,
+   **Public**, sem README, `.gitignore` nem licença.
+2. Na pasta do projeto: `git push -u origin main` (o Windows pede o login do
+   GitHub na primeira vez).
+3. Se ao fim de dois minutos o site não abrir: no repositório, **Settings →
+   Pages → Build and deployment**, origem **Deploy from a branch**, ramo
+   `main`, pasta `/ (root)`.
 
 Para atualizar o site depois de mudar alguma coisa:
 
