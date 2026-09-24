@@ -1,6 +1,4 @@
-# Só tem efeito na raiz de um domínio. Enquanto o site estiver em
-# tomazio177.github.io/portfolio/, o sitemap entra pelo Google Search Console.
 User-agent: *
 Allow: /
 
-Sitemap: https://tomazio177.github.io/portfolio/sitemap.xml
+Sitemap: https://tomas-santos.vercel.app/sitemap.xml

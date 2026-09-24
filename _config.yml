@@ -1,5 +1,0 @@
-# GitHub Pages publica a pasta tal como está (não há build).
-# Isto só deixa de fora do site publicado o que não faz parte dele.
-exclude:
-  - README.md
-  - tools/

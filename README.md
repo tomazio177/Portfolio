@@ -1,7 +1,7 @@
 # Portfólio
 
 Site estático (HTML + CSS + JS, sem build) construído a partir do design
-original (`Portfolio.dc.html`). Publicado em **https://tomazio177.github.io/portfolio/**.
+original (`Portfolio.dc.html`). Publicado em **https://tomas-santos.vercel.app/**.
 
 ## Correr localmente
 
@@ -24,7 +24,8 @@ js/github-projects.js  vai buscar os repos à GitHub REST API e cria os cards
 assets/             objetos cromados em WebP, og-image.jpg, favicon
 assets/originais/   imagens tal como vieram (só local, fora do git)
 tools/cutout.js     tira o fundo a uma foto nova e exporta WebP
-robots.txt, sitemap.xml, _config.yml   para o Google e o GitHub Pages
+robots.txt, sitemap.xml   para o Google
+.vercelignore       o que fica fora do site publicado (README, tools/)
 handoff/            bundle original do design (só local, fora do git)
 ```
 
@@ -102,19 +103,22 @@ Pages estiver ativo, o URL das Pages é construído automaticamente
 
 ## Publicar
 
-O site está no GitHub Pages em **https://tomazio177.github.io/portfolio/**
-(repositório `portfolio`, ramo `main`, pasta `/ (root)`). Não há build: cada
-push publica sozinho ao fim de um minuto ou dois.
+O site está no **Vercel** em **https://tomas-santos.vercel.app/**, ligado ao
+repositório `tomazio177/Portfolio` (ramo `main`). Não há build (preset
+**Other**): cada push publica sozinho ao fim de uns segundos.
 
-- `_config.yml` deixa o README e a pasta `tools/` fora do site publicado.
+- `.vercelignore` deixa o README e a pasta `tools/` fora do site publicado.
 - `.gitignore` deixa fora do repositório o `handoff/` (tem a fonte paga) e
   os `assets/originais/`, que ficam só neste computador.
 - O endereço aparece em `index.html` (canonical, og:url, og:image, JSON-LD),
-  `robots.txt`, `sitemap.xml` e nos caminhos absolutos do `404.html`
-  (`/portfolio/...`). Se um dia mudar (ex.: domínio próprio), troca-se
-  nesses sítios.
-- O repositório tem de continuar **público**: no plano gratuito o GitHub
-  Pages não publica repositórios privados.
+  `robots.txt` e `sitemap.xml`. Se um dia mudar (ex.: domínio próprio,
+  que se liga em Vercel → Settings → Domains), troca-se nesses sítios.
+- O `404.html` usa caminhos absolutos (`/css/...`) porque o Vercel o serve em
+  qualquer endereço que não exista, incluindo subpastas.
+
+Ligar ao Vercel (só uma vez): em <https://vercel.com/new>, **Import** do
+repositório `tomazio177/Portfolio` (autorizar a app do Vercel no GitHub se
+pedir), nome do projeto `tomas-santos`, Framework Preset **Other**, **Deploy**.
 
 Para atualizar o site depois de mudar alguma coisa:
 

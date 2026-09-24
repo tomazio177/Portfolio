@@ -30,13 +30,6 @@
     // 'IA-Cliper': 'assets/covers/ia-cliper.webp'
   };
 
-  /* nomes a mostrar no card (opcional): nome do repositório em minúsculas →
-     título. Os repositórios sem entrada mostram o nome tal como está. */
-  var NAMES = {
-    'portfolio': 'Portfolio',
-    'tomazio177.github.io': 'Portfolio'
-  };
-
   /* imagens do design usadas em rotação como capa dos cards sem COVERS */
   var OBJECTS = [
     'assets/obj-dice.webp',
@@ -224,7 +217,7 @@
     link.appendChild(buildMedia(repo, i));
 
     var meta  = el('div', 'card-meta');
-    var title = el('span', 'card-title', NAMES[repo.name.toLowerCase()] || repo.name);
+    var title = el('span', 'card-title', repo.name);
     title.setAttribute('data-card-title', '');
     meta.appendChild(title);
     meta.appendChild(el('span', 'card-index', String(year)));
