@@ -1,7 +1,6 @@
 # Portfólio
 
-Site estático (HTML + CSS + JS, sem build) construído a partir do design
-original (`Portfolio.dc.html`). Publicado em **https://tomas-santos.vercel.app/**.
+Site estático (HTML + CSS + JS, sem build) (`Portfolio.dc.html`). Publicado em **https://tomas-santos.vercel.app/**.
 
 ## Correr localmente
 
