@@ -1,7 +1,7 @@
 # Portfólio
 
 Site estático (HTML + CSS + JS, sem build) construído a partir do design
-original (`Portfolio.dc.html`). Publicado em **https://tomazio177.github.io/**.
+original (`Portfolio.dc.html`). Publicado em **https://tomazio177.github.io/portfolio/**.
 
 ## Correr localmente
 
@@ -102,26 +102,19 @@ Pages estiver ativo, o URL das Pages é construído automaticamente
 
 ## Publicar
 
-O site está preparado para o GitHub Pages em **https://tomazio177.github.io/**
-(repositório `tomazio177.github.io`, ramo `main`). Não há build: cada push
-publica sozinho ao fim de um minuto ou dois.
+O site está no GitHub Pages em **https://tomazio177.github.io/portfolio/**
+(repositório `portfolio`, ramo `main`, pasta `/ (root)`). Não há build: cada
+push publica sozinho ao fim de um minuto ou dois.
 
 - `_config.yml` deixa o README e a pasta `tools/` fora do site publicado.
 - `.gitignore` deixa fora do repositório o `handoff/` (tem a fonte paga) e
   os `assets/originais/`, que ficam só neste computador.
 - O endereço aparece em `index.html` (canonical, og:url, og:image, JSON-LD),
-  `robots.txt` e `sitemap.xml`. Se um dia mudar (ex.: domínio próprio),
-  troca-se nesses sítios.
-
-Primeira publicação (só uma vez):
-
-1. Em <https://github.com/new> criar o repositório `tomazio177.github.io`,
-   **Public**, sem README, `.gitignore` nem licença.
-2. Na pasta do projeto: `git push -u origin main` (o Windows pede o login do
-   GitHub na primeira vez).
-3. Se ao fim de dois minutos o site não abrir: no repositório, **Settings →
-   Pages → Build and deployment**, origem **Deploy from a branch**, ramo
-   `main`, pasta `/ (root)`.
+  `robots.txt`, `sitemap.xml` e nos caminhos absolutos do `404.html`
+  (`/portfolio/...`). Se um dia mudar (ex.: domínio próprio), troca-se
+  nesses sítios.
+- O repositório tem de continuar **público**: no plano gratuito o GitHub
+  Pages não publica repositórios privados.
 
 Para atualizar o site depois de mudar alguma coisa:
 

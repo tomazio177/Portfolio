@@ -1,4 +1,6 @@
+# Só tem efeito na raiz de um domínio. Enquanto o site estiver em
+# tomazio177.github.io/portfolio/, o sitemap entra pelo Google Search Console.
 User-agent: *
 Allow: /
 
-Sitemap: https://tomazio177.github.io/sitemap.xml
+Sitemap: https://tomazio177.github.io/portfolio/sitemap.xml
