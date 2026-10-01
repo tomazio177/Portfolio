@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tomas-santos.vercel.app/sitemap.xml
+Sitemap: https://tomassantos.pt/sitemap.xml

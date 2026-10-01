@@ -1,6 +1,6 @@
 # Portfólio
 
-Site estático (HTML + CSS + JS, sem build) (`Portfolio.dc.html`). Publicado em **https://tomas-santos.vercel.app/**.
+Site estático (HTML + CSS + JS, sem build) (`Portfolio.dc.html`). Publicado em **https://tomassantos.pt/**.
 
 ## Correr localmente
 
@@ -102,7 +102,7 @@ Pages estiver ativo, o URL das Pages é construído automaticamente
 
 ## Publicar
 
-O site está no **Vercel** em **https://tomas-santos.vercel.app/**, ligado ao
+O site está no **Vercel** em **https://tomassantos.pt/**, ligado ao
 repositório `tomazio177/Portfolio` (ramo `main`). Não há build (preset
 **Other**): cada push publica sozinho ao fim de uns segundos.
 
