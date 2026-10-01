@@ -36,7 +36,7 @@ handoff/            bundle original do design (só local, fora do git)
 | Texto do Sobre | `index.html`, `[data-bio]` |
 | Projetos | vêm do GitHub — ver secção abaixo |
 | Competências | `index.html`, secção `#competencias` (um `<li>` por item; a nota pequena vai em `.skill-note`) |
-| Percurso | `index.html`, secção `#percurso` (um `.timeline-item` por entrada, do mais recente para o mais antigo) |
+| Percurso | `index.html`, secção `#percurso` (um `.timeline-item` por entrada, do mais recente para o mais antigo; os certificados levam um `.timeline-link` para a página de verificação) |
 | CV em PDF | pôr o ficheiro em `assets/cv-tomas-santos.pdf` e descomentar o botão no fim de `#percurso` |
 | Imagens originais (tal como vieram) | `assets/originais/` — as versões recortadas usadas no site são os `assets/obj-*.webp` |
 | Objetos cromados novos (fotos) | recortar com `node tools/cutout.js <foto.jpg> assets/obj-nome.webp <tamanho-max> [tolerância]`; tira o fundo liso a partir das margens e exporta WebP com transparência |

@@ -805,6 +805,21 @@ img { max-width: 100%; }
   text-wrap: pretty;
 }
 
+/* link de uma entrada (ex.: verificar um certificado): mesmo desenho das redes sociais */
+.timeline-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  transition: color .7s ease;
+}
+.timeline-link:hover,
+.timeline-link:focus-visible { color: var(--fg-bright); }
+.timeline-item.is-dim .timeline-link { color: var(--fg-off); }
+
 /* botão principal (ex.: descarregar o CV): começa preenchido */
 .btn--solid {
   color: #08080a;
