@@ -72,6 +72,13 @@ No GitHub, em cada repositório que queiras no portefólio:
 A partir daí o repo aparece no site sozinho. Repos sem o tópico ficam de fora.
 Só isso — não é preciso tocar no código quando crias um projeto novo.
 
+### 3. Projetos por acabar
+
+Um repo com o tópico `em-curso` (além de `portfolio`) leva o selo
+**Trabalho em curso** por cima da capa, com um ponto âmbar a pulsar. Quando o
+projeto estiver acabado, tira-se o tópico no GitHub e o selo desaparece. O
+nome do tópico está em `WIP_TOPIC`, ao lado de `TOPIC`.
+
 ### O que cada card mostra
 
 Nome do repositório, descrição, linguagem principal (com o pontinho colorido

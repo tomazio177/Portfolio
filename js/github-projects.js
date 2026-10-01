@@ -16,6 +16,7 @@
      ======================================================================== */
   var GITHUB_USERNAME = 'tomazio177';
   var TOPIC           = 'portfolio';  // só aparecem repos com este tópico
+  var WIP_TOPIC       = 'em-curso';   // estes levam o selo "Trabalho em curso"
   /* ======================================================================== */
 
   var PER_PAGE   = 100;   // máximo permitido pela API
@@ -27,7 +28,7 @@
      Uma captura do projeto em assets/covers/, idealmente 1600px de largura
      em .webp ou .jpg. Os repositórios sem entrada usam um objeto do design. */
   var COVERS = {
-    // 'IA-Cliper': 'assets/covers/ia-cliper.webp'
+    'bff-site': 'assets/covers/bff-site.webp'
   };
 
   /* imagens do design usadas em rotação como capa dos cards sem COVERS */
@@ -183,7 +184,7 @@
     img.loading = 'lazy';
 
     /* legenda: os outros tópicos do repo, senão a linguagem */
-    var others = (repo.topics || []).filter(function (t) { return t !== TOPIC; });
+    var others = (repo.topics || []).filter(function (t) { return t !== TOPIC && t !== WIP_TOPIC; });
     var caption = others.length ? others.slice(0, 3).join(' · ')
                 : repo.language ? repo.language
                 : 'Repositório';
@@ -191,7 +192,18 @@
 
     media.appendChild(img);
     media.appendChild(note);
+
+    if (isWip(repo)) {
+      var badge = el('span', 'card-badge');
+      badge.appendChild(el('span', 'card-badge-dot'));
+      badge.appendChild(el('span', null, 'Trabalho em curso'));
+      media.appendChild(badge);
+    }
     return media;
+  }
+
+  function isWip(repo) {
+    return (repo.topics || []).indexOf(WIP_TOPIC) !== -1;
   }
 
   function buildCard(repo, i) {
@@ -212,7 +224,9 @@
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.setAttribute('data-card-link', '');
-    link.setAttribute('aria-label', 'Abrir ' + repo.name + ' no GitHub');
+    /* o aria-label substitui o texto do link, por isso o selo vai aqui também */
+    link.setAttribute('aria-label', 'Abrir ' + repo.name +
+      (isWip(repo) ? ' (trabalho em curso)' : '') + ' no GitHub');
 
     link.appendChild(buildMedia(repo, i));
 
